@@ -1,6 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import { useZustandStore } from "../zustand_store";
-import { RootState } from "../types";
+import { useZustandStore, ZustandStore } from "../zustand_store";
 
 export function FormFieldZ2({ onChange, storeKey, initialValue }) {
   const ref = useRef<HTMLInputElement>();
@@ -12,7 +11,7 @@ export function FormFieldZ2({ onChange, storeKey, initialValue }) {
           ref.current.value = `${v * 4}`;
         }
       },
-      (state: RootState) => state[storeKey]
+      (state: ZustandStore) => state[storeKey]
     );
     return () => {
       unsubscribe();

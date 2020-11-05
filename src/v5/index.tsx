@@ -11,7 +11,8 @@ import { useZustandStore } from "../zustand_store";
 const onChange = (e: InputEvent) => {
   const value = (e.target as HTMLInputElement).valueAsNumber;
   store.dispatch({ type: SET_FIELD, payload: { value } });
-  useZustandStore.setState({ field: value });
+  // useZustandStore.setState({ field: value });
+  useZustandStore.getState().setField2(value);
 };
 
 useZustandStore.setState(store.getState());
