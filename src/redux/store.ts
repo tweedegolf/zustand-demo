@@ -5,7 +5,7 @@ import { rootReducer } from "./reducer";
 import { RootState } from "../types";
 import { Observable, Subscriber } from "rxjs";
 
-const initialState: RootState = { width: 0, height: 0, field: 0, field1: 1, field2: 2, field3: 3 };
+const initialState: RootState = { width: 0, height: 0, field: 0, field1: 0 };
 
 // const store: Store<any, AnyAction> = createStore(
 const store = createStore(
@@ -27,4 +27,4 @@ const getState$ = (): Observable<RootState> => {
   return state$;
 };
 
-export { getState$, store };
+export { getState$, state$, store };

@@ -17,6 +17,7 @@ module.exports = {
     "src/v3/": "./src/v3/index.tsx",
     "src/v4/": "./src/v4/index.tsx",
     "src/v5/": "./src/v5/index.tsx",
+    "src/v6/": "./src/v6/index.tsx",
   },
 
   devtool: "inline-source-map",

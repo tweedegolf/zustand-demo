@@ -1,5 +1,5 @@
 import { RootState } from "../types";
-import { RESIZE, SET_FIELD } from "../constants";
+import { RESIZE, SET_FIELD, SET_FIELD_1 } from "../constants";
 
 export const rootReducer = (
   state: RootState,
@@ -17,6 +17,12 @@ export const rootReducer = (
     return {
       ...state,
       field: value,
+    };
+  } else if (action.type === SET_FIELD_1) {
+    const { value } = action.payload;
+    return {
+      ...state,
+      field1: value,
     };
   }
 
