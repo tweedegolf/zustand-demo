@@ -14,6 +14,7 @@ const onChange = (e: InputEvent) => {
 };
 
 useZustandStore.setState(store.getState());
+console.log(useZustandStore.getState());
 
 render(
   <>
